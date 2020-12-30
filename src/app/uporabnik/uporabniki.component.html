@@ -1,0 +1,11 @@
+<h2>Uporabniki</h2>
+
+<ul class="uporabniki">
+    <li *ngFor="let user of uporabniki" (click)="naPodrobnosti(user)">
+        <span>{{user.ime}} {{user.priimek}} </span>
+        <button class="delete"
+                (click)="delete(user); $event.stopPropagation()">x
+        </button>
+    </li>
+</ul>
+<button (click)="dodajUporabnika()">Dodaj uporabnika</button>
